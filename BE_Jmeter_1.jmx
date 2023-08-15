@@ -1258,7 +1258,7 @@
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="fileEncoding"></stringProp>
-          <stringProp name="filename">D:/FrondEnd/Testing/performance/apache-jmeter-5.6/apache-jmeter-5.6/bin/data.csv</stringProp>
+          <stringProp name="filename">D:\FrondEnd\Testing\performance\jmeter\apache-jmeter-5.6\apache-jmeter-5.6\bin\data.csv</stringProp>
           <boolProp name="ignoreFirstLine">false</boolProp>
           <boolProp name="quotedData">false</boolProp>
           <boolProp name="recycle">true</boolProp>
@@ -1346,7 +1346,7 @@
                 <elementProp name="add_cart_data" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
                   <stringProp name="Argument.name">add_cart_data</stringProp>
-                  <stringProp name="Argument.value">current_product=91&amp;cart_content=&amp;current_quantity=1</stringProp>
+                  <stringProp name="Argument.value">current_product=${productId}&amp;cart_content=&amp;current_quantity=${Quantity}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
@@ -1435,14 +1435,14 @@
                 <elementProp name="cart_content" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
                   <stringProp name="Argument.name">cart_content</stringProp>
-                  <stringProp name="Argument.value">{&quot;91__&quot;:1}</stringProp>
+                  <stringProp name="Argument.value">{&quot;${productId}__&quot;:1}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
                 <elementProp name="p_quantity[]" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
                   <stringProp name="Argument.name">p_quantity[]</stringProp>
-                  <stringProp name="Argument.value">1</stringProp>
+                  <stringProp name="Argument.value">${Quantity}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
@@ -1456,21 +1456,21 @@
                 <elementProp name="p_id[]" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
                   <stringProp name="Argument.name">p_id[]</stringProp>
-                  <stringProp name="Argument.value">91__</stringProp>
+                  <stringProp name="Argument.value">${productId}__</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
                 <elementProp name="trans_id" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
                   <stringProp name="Argument.name">trans_id</stringProp>
-                  <stringProp name="Argument.value">16886418695814</stringProp>
+                  <stringProp name="Argument.value">${transaction_id}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
                 <elementProp name="total_net" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
                   <stringProp name="Argument.name">total_net</stringProp>
-                  <stringProp name="Argument.value">164.00</stringProp>
+                  <stringProp name="Argument.value">${total}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
@@ -1513,14 +1513,14 @@
                 <elementProp name="cart_city" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
                   <stringProp name="Argument.name">cart_city</stringProp>
-                  <stringProp name="Argument.value">dummyCity</stringProp>
+                  <stringProp name="Argument.value">${city}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
                 <elementProp name="cart_content" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
                   <stringProp name="Argument.name">cart_content</stringProp>
-                  <stringProp name="Argument.value">{&quot;91__&quot;:1},{&quot;91__&quot;:1}</stringProp>
+                  <stringProp name="Argument.value">{&quot;${productId}__&quot;:1},{&quot;${productId}__&quot;:1}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
@@ -1562,7 +1562,7 @@
                 <elementProp name="trans_id" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
                   <stringProp name="Argument.name">trans_id</stringProp>
-                  <stringProp name="Argument.value">16886418695814</stringProp>
+                  <stringProp name="Argument.value">${transaction_id}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
@@ -1611,14 +1611,14 @@
                 <elementProp name="product_price_121__" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
                   <stringProp name="Argument.name">product_price_121__</stringProp>
-                  <stringProp name="Argument.value">164.00</stringProp>
+                  <stringProp name="Argument.value">${total}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
                 <elementProp name="cart_company" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
                   <stringProp name="Argument.name">cart_company</stringProp>
-                  <stringProp name="Argument.value">dummy company</stringProp>
+                  <stringProp name="Argument.value">${company_name}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
@@ -1632,7 +1632,7 @@
                 <elementProp name="cart_name" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
                   <stringProp name="Argument.name">cart_name</stringProp>
-                  <stringProp name="Argument.value">dummy name</stringProp>
+                  <stringProp name="Argument.value">${ name}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
@@ -1653,7 +1653,7 @@
                 <elementProp name="cart_phone" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
                   <stringProp name="Argument.name">cart_phone</stringProp>
-                  <stringProp name="Argument.value">1234567890</stringProp>
+                  <stringProp name="Argument.value">${phone}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
@@ -1667,14 +1667,14 @@
                 <elementProp name="cart_address" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
                   <stringProp name="Argument.name">cart_address</stringProp>
-                  <stringProp name="Argument.value">dummy address</stringProp>
+                  <stringProp name="Argument.value">${address}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
                 <elementProp name="cart_postal" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
                   <stringProp name="Argument.name">cart_postal</stringProp>
-                  <stringProp name="Argument.value">122012</stringProp>
+                  <stringProp name="Argument.value">${postal}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
@@ -1695,7 +1695,7 @@
                 <elementProp name="cart_email" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
                   <stringProp name="Argument.name">cart_email</stringProp>
-                  <stringProp name="Argument.value">dummy@gmail.com</stringProp>
+                  <stringProp name="Argument.value">${email}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
@@ -1716,7 +1716,7 @@
                 <elementProp name="total_net" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">true</boolProp>
                   <stringProp name="Argument.name">total_net</stringProp>
-                  <stringProp name="Argument.value">420.00</stringProp>
+                  <stringProp name="Argument.value">${total}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
@@ -1755,6 +1755,18 @@
             </UniformRandomTimer>
             <hashTree/>
           </hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
+            <stringProp name="delimiter">,</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="filename">D:\FrondEnd\Testing\performance\jmeter\apache-jmeter-5.6\apache-jmeter-5.6\bin\data.csv</stringProp>
+            <boolProp name="ignoreFirstLine">false</boolProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="variableNames">productId,Quantity,transaction_id,total,city,company_name,name,phone,address,postal,email</stringProp>
+          </CSVDataSet>
+          <hashTree/>
         </hashTree>
       </hashTree>
       <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer">
